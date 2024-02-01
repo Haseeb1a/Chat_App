@@ -23,6 +23,7 @@ class _HomePageState extends State<HomePage> {
           IconButton(onPressed: () {}, icon: const Icon(Icons.search)),
           IconButton(onPressed: () {}, icon: const Icon(Icons.more_vert))
         ],
+        
       ),
       floatingActionButton: Padding(
         padding: const EdgeInsets.only(bottom: 10),

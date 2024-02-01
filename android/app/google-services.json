@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "820385589607",
+    "project_id": "chatx-app-b32f0",
+    "storage_bucket": "chatx-app-b32f0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:820385589607:android:b24362484e2648390967c2",
+        "android_client_info": {
+          "package_name": "com.example.chatx"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDAAdr3m7lj2dhO0Jxb0z5Yjc9sNZHsOJE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
