@@ -1,3 +1,5 @@
+import 'package:chatx/constrains/base_objects.dart';
+import 'package:chatx/widgets/char_user_card.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -23,6 +25,19 @@ class _HomePageState extends State<HomePage> {
           IconButton(onPressed: () {}, icon: const Icon(Icons.search)),
           IconButton(onPressed: () {}, icon: const Icon(Icons.more_vert))
         ],
+      ),
+      body: StreamBuilder(
+        stream: Base.firestore.collection('users').snapshots(),
+        builder: (context, snapshot) {
+          return ListView.builder(
+          physics: BouncingScrollPhysics(),
+          padding: EdgeInsets.only(top: 5),
+          itemCount: 20,
+          itemBuilder: (context, index) {
+            return CharUserCard();
+          },
+        );
+        },
         
       ),
       floatingActionButton: Padding(
