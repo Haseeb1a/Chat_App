@@ -20,16 +20,17 @@ class CharUser {
     required this.email,
     required this.pushTocken,
   });
+
   CharUser.fromJson(Map<String, dynamic> json) {
-    name = json['name'];
-    image = json['image'];
-    about = json['about'];
-    isOnline = json['is_online'];
+    name = json['name']??'';
+    image = json['image']??'';
+    about = json['about']??'';
+    isOnline = json['is_online']??'';
     id = json['id'];
-    createdAt = json['created-at'];
-    isActive = json['last_active'];
-    email = json['email'];
-    pushTocken = json['push_token'];
+    createdAt = json['created_at']??'';
+    isActive = json['last_active']??'';
+    email = json['email']??'';
+    pushTocken = json['push_token']??'';
   }
 
   Map<String, dynamic> toJson() {
@@ -39,7 +40,7 @@ class CharUser {
     data['about'] = about;
     data['is_online'] = isOnline;
     data['id'] = id;
-    data['created-at'] = createdAt;
+    data['created_at'] = createdAt;
     data['last_active'] = isActive;
     data['email'] = email;
     data['image'] = pushTocken;

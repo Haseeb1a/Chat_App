@@ -1,5 +1,7 @@
+import 'package:chatx/controllers/home_controller.dart';
 import 'package:chatx/controllers/login_controllers.dart';
 import 'package:chatx/firebase_options.dart';
+import 'package:chatx/views/auth_state.dart';
 import 'package:chatx/views/home_page.dart';
 import 'package:chatx/views/login_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -21,7 +23,8 @@ void main() async {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
-        ChangeNotifierProvider(create: (context)=>LoginController())
+        ChangeNotifierProvider(create: (context)=>LoginController()),
+        ChangeNotifierProvider(create: (context)=>HomeController ())
       ],
       child: MaterialApp(
           
@@ -30,7 +33,7 @@ void main() async {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
-        home: const LoginScreen(),
+        home: const AuthGate(),
       ),
     );
   }

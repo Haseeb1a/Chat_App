@@ -1,4 +1,6 @@
 import 'package:chatx/controllers/login_controllers.dart';
+import 'package:chatx/services/auth_methods.dart';
+import 'package:chatx/services/service_operatiions.dart';
 import 'package:chatx/views/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -14,6 +16,11 @@ class _LoginScreenState extends State<LoginScreen> {
   bool _isAnimated = false;
   @override
   void initState() {
+   
+    // if (await AuthMehods.userExiting()) {
+    //    Navigator.push(context,
+    //                   MaterialPageRoute(builder: (context) => HomePage()));
+    // }
     // TODO: implement initState
     super.initState();
     Future.delayed(Duration(microseconds: 500), () {
@@ -27,6 +34,7 @@ class _LoginScreenState extends State<LoginScreen> {
   Widget build(BuildContext context) {
     Size dd = MediaQuery.of(context).size;
     final loginProvider = Provider.of<LoginController>(context);
+    // loginProvider.checkUserExiting(context);
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
@@ -50,7 +58,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     shape: const StadiumBorder(),
                     elevation: 1),
                 onPressed: () async {
-                 await loginProvider.singingWithGoogle(context);
+                  await loginProvider.singingWithGoogle(context);
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => HomePage()));
                 },
