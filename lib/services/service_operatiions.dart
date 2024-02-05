@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:chatx/constrains/base_objects.dart';
 import 'package:chatx/model/chat_user_model.dart';
 import 'package:chatx/services/auth_methods.dart';
@@ -16,17 +18,25 @@ class ApiServices {
   }
 
   // geting current user
-  static Future<void> getCurrentUser() async{
+  static Future<void> getCurrentUser() async {
     return Base.firestore
         .collection('users')
         .doc(Base.auth.currentUser!.uid)
         .get()
-        .then((user)async {
+        .then((user) async {
       if (user.exists) {
         currentUser = CharUser.fromJson(user.data()!);
-      }else   {
-    await AuthMehods.creatingUser().then((value) => getCurrentUser());
+      } else {
+        await AuthMehods.creatingUser().then((value) => getCurrentUser());
       }
     });
+  }
+
+  // user Profile Update
+  Future<void> updateProfile() async {
+    await Base.firestore
+        .collection('users')
+        .doc(Base.auth.currentUser!.uid)
+        .update({'name': currentUser.name, "about": currentUser.about});
   }
 }

@@ -1,13 +1,13 @@
 class CharUser {
-  late final String name;
-  late final String image;
-  late final String about;
-  late final String id;
-  late final bool isOnline;
-  late final String createdAt;
-  late final String isActive;
-  late final String email;
-  late final String pushTocken;
+  late  String name;
+  late  String image;
+  late  String about;
+  late  String id;
+  late  bool isOnline;
+  late  String createdAt;
+  late  String isActive;
+  late  String email;
+  late  String pushTocken;
 
   CharUser({
     required this.name,

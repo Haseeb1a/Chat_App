@@ -22,8 +22,9 @@ class _HomePageState extends State<HomePage> {
   void initState() {
     // TODO: implement initState
     super.initState();
-     ApiServices.getCurrentUser();
+    ApiServices.getCurrentUser();
   }
+
   @override
   Widget build(BuildContext context) {
     final userprovider = Provider.of<HomeController>(context);
@@ -39,14 +40,15 @@ class _HomePageState extends State<HomePage> {
         actions: [
           IconButton(onPressed: () {}, icon: const Icon(Icons.search)),
           IconButton(
-              onPressed: ()  {
+              onPressed: () {
                 // Future<void> signOut() async {
                 // await GoogleSignIn().signOut();
                 // await FirebaseAuth.instance.signOut();
                 Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => Profile_page(user:ApiServices.currentUser),
+                      builder: (context) =>
+                          Profile_page(user: ApiServices.currentUser),
                     ));
                 // await _auth.signOut();
               },
@@ -54,7 +56,7 @@ class _HomePageState extends State<HomePage> {
         ],
       ),
       body: StreamBuilder(
-        stream:ApiServices.getAllUsers(),
+        stream: ApiServices.getAllUsers(),
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
             return Center(child: CircularProgressIndicator());
