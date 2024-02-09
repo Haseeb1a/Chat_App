@@ -4,7 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class CharUserCard extends StatelessWidget {
-  final CharUser userdata;
+  final ChatUser userdata;
   const CharUserCard({super.key, required this.userdata});
 
   @override

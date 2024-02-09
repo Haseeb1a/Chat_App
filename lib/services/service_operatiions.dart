@@ -8,7 +8,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 
 class ApiServices {
-  static late CharUser currentUser;
+  static late ChatUser currentUser;
   // get all users
   static Stream<QuerySnapshot<Map<String, dynamic>>> getAllUsers() {
     return Base.firestore
@@ -25,7 +25,7 @@ class ApiServices {
         .get()
         .then((user) async {
       if (user.exists) {
-        currentUser = CharUser.fromJson(user.data()!);
+        currentUser = ChatUser.fromJson(user.data()!);
       } else {
         await AuthMehods.creatingUser().then((value) => getCurrentUser());
       }

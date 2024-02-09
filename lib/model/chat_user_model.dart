@@ -1,4 +1,4 @@
-class CharUser {
+class ChatUser {
   late  String name;
   late  String image;
   late  String about;
@@ -9,7 +9,7 @@ class CharUser {
   late  String email;
   late  String pushTocken;
 
-  CharUser({
+  ChatUser({
     required this.name,
     required this.image,
     required this.about,
@@ -21,7 +21,7 @@ class CharUser {
     required this.pushTocken,
   });
 
-  CharUser.fromJson(Map<String, dynamic> json) {
+  ChatUser.fromJson(Map<String, dynamic> json) {
     name = json['name']??'';
     image = json['image']??'';
     about = json['about']??'';

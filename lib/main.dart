@@ -1,9 +1,11 @@
 import 'package:chatx/controllers/home_controller.dart';
 import 'package:chatx/controllers/login_controllers.dart';
+import 'package:chatx/controllers/profile_controller.dart';
 import 'package:chatx/firebase_options.dart';
 import 'package:chatx/views/auth_state.dart';
 import 'package:chatx/views/home_page.dart';
 import 'package:chatx/views/login_screen.dart';
+import 'package:chatx/views/profile_screen/proflle_page.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -24,7 +26,8 @@ void main() async {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (context)=>LoginController()),
-        ChangeNotifierProvider(create: (context)=>HomeController ())
+        ChangeNotifierProvider(create: (context)=>HomeController ()),
+        ChangeNotifierProvider(create: (context)=>ProfleController ())
       ],
       child: MaterialApp(
           

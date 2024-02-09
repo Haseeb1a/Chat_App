@@ -45,7 +45,7 @@ class AuthMehods {
   // Creataing new user
   static Future<void> creatingUser() async {
     final time = DateTime.now().millisecondsSinceEpoch.toString();
-    final user = CharUser(
+    final user = ChatUser(
         name: Base.auth.currentUser!.displayName.toString(),
         image: Base.auth.currentUser!.photoURL.toString(),
         about: 'i am using chatx',
