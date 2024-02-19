@@ -1,7 +1,5 @@
 import 'package:chatx/controllers/login_controllers.dart';
-import 'package:chatx/services/auth_methods.dart';
-import 'package:chatx/services/service_operatiions.dart';
-import 'package:chatx/views/home_page.dart';
+import 'package:chatx/views/home_users/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 

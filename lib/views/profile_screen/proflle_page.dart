@@ -1,4 +1,4 @@
-import 'dart:io';
+
 
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:chatx/constrains/base_objects.dart';
@@ -53,17 +53,21 @@ class Profile_page extends StatelessWidget {
                                       ),
                                     ),
                                   )
-                                : ClipRRect(
-                                    borderRadius: BorderRadius.circular(50),
-                                    child: CachedNetworkImage(
-                                      fit: BoxFit.cover,
-                                      imageUrl: user.image,
-                                      errorWidget: (context, url, error) =>
-                                          CircleAvatar(
-                                        child: Icon(Icons.person),
+                                : SizedBox(
+                                  height: 250,
+                                    width: 200,
+                                  child: ClipRRect(
+                                      borderRadius: BorderRadius.circular(50),
+                                      child: CachedNetworkImage(
+                                        fit: BoxFit.cover,
+                                        imageUrl: user.image,
+                                        errorWidget: (context, url, error) =>
+                                            CircleAvatar(
+                                          child: Icon(Icons.person),
+                                        ),
                                       ),
                                     ),
-                                  );
+                                );
                           },
                         ),
                         Positioned(

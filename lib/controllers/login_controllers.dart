@@ -1,8 +1,7 @@
 import 'dart:developer';
 
 import 'package:chatx/services/auth_methods.dart';
-import 'package:chatx/views/home_page.dart';
-import 'package:chatx/views/login_screen.dart';
+import 'package:chatx/views/home_users/home_page.dart';
 import 'package:flutter/material.dart';
 
 class LoginController extends ChangeNotifier {

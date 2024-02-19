@@ -1,8 +1,7 @@
 import 'package:chatx/constrains/base_objects.dart';
-import 'package:chatx/views/home_page.dart';
+import 'package:chatx/views/home_users/home_page.dart';
 import 'package:chatx/views/login_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 class AuthGate extends StatelessWidget {

@@ -1,14 +1,11 @@
-import 'package:chatx/constrains/base_objects.dart';
+
 import 'package:chatx/controllers/home_controller.dart';
 import 'package:chatx/model/chat_user_model.dart';
 import 'package:chatx/services/service_operatiions.dart';
 import 'package:chatx/views/profile_screen/proflle_page.dart';
 import 'package:chatx/widgets/char_user_card.dart';
-import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:google_sign_in/google_sign_in.dart';
 import 'package:provider/provider.dart';
 
 class HomePage extends StatefulWidget {
